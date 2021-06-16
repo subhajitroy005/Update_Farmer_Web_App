@@ -1,0 +1,36 @@
+<div class="signup_main_div">
+        <h1>Signup Page</h1>
+        <% if(@message) %>
+        <strong><%= @message %></strong>
+        <% end %>
+        <%= form_with url: '/signup', method: :get do |new_form| %>
+
+                <div class="signup_filed_div">
+                        <p><%= new_form.label :u_name , "Username" %></p>
+                        <p><%= new_form.text_field :u_name %></p>
+                </div>
+
+                <div class="signup_filed_div">
+                        <p><%= new_form.label :email , "Email" %></p>
+                        <p><%= new_form.text_field :email %></p>
+                </div>
+
+                <div class="signup_filed_div">
+                        <p><%= new_form.label :pass , "Password" %></p>
+                        <p><%= new_form.text_field :pass %></p>
+                </div>
+
+
+                <div class="signup_filed_div">
+                        <div class = "error_div">
+                        </div>
+                        <p><%= new_form.label :repass , "Re-enter Password" %></p>
+                        <p><%= new_form.text_field :repass %></p>
+                </div>
+
+                <div class = "signup_button_div">
+                        <%= new_form.submit "Sinup" %>
+                <div>
+
+        <% end %>
+</div>
