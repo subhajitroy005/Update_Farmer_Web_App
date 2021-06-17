@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Temp:</strong>
+  <%= @iot_datum.temp %>
+</p>
+
+<p>
+  <strong>Hum:</strong>
+  <%= @iot_datum.hum %>
+</p>
+
+<%= link_to 'Edit', edit_iot_datum_path(@iot_datum) %> |
+<%= link_to 'Back', iot_data_path %>

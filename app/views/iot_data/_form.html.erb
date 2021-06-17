@@ -1,0 +1,27 @@
+<%= form_with(model: iot_datum) do |form| %>
+  <% if iot_datum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(iot_datum.errors.count, "error") %> prohibited this iot_datum from being saved:</h2>
+
+      <ul>
+        <% iot_datum.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :temp %>
+    <%= form.text_field :temp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hum %>
+    <%= form.text_field :hum %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

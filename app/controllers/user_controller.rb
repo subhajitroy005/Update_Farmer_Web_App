@@ -26,4 +26,8 @@ class UserController < ApplicationController
 
         end
 
+        def search
+                params
+        end
+
 end

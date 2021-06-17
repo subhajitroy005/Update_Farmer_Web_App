@@ -1,0 +1,7 @@
+<h1>Search Page</h1>
+
+<%= form_with scope: @user , method: :get do |form| %> <! url: '/search'>
+        <%=     form.label :query , "Search For"        %>
+        <%=     form.text_field :query  %>
+        <%=     form.submit "Search"    %>
+<% end %>
