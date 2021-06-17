@@ -4257,3 +4257,41 @@ Processing by UserController#signup as HTML
 Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 7008)
 
 
+Started GET "/" for 127.0.0.1 at 2021-06-17 20:58:25 +0530
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 307)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 7510)
+Completed 200 OK in 98ms (Views: 19.2ms | ActiveRecord: 0.0ms | Allocations: 11017)
+
+
+Started GET "/signup" for 127.0.0.1 at 2021-06-17 20:58:29 +0530
+Processing by UserController#signup as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user/signup.html.erb within layouts/application
+  Rendered user/signup.html.erb within layouts/application (Duration: 5.5ms | Allocations: 4335)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 7370)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 8428)
+
+
+Started GET "/signup" for 127.0.0.1 at 2021-06-17 20:58:30 +0530
+Processing by UserController#signup as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user/signup.html.erb within layouts/application
+  Rendered user/signup.html.erb within layouts/application (Duration: 4.0ms | Allocations: 3564)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 6536)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 7009)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
