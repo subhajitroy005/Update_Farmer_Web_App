@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_17_090823) do
+ActiveRecord::Schema.define(version: 2021_07_02_074903) do
 
   create_table "accounts", force: :cascade do |t|
     t.string "username"
@@ -23,6 +23,13 @@ ActiveRecord::Schema.define(version: 2021_06_17_090823) do
   create_table "iot_data", force: :cascade do |t|
     t.string "temp"
     t.string "hum"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "tushars", force: :cascade do |t|
+    t.string "name"
+    t.string "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

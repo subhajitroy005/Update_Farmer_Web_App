@@ -1,8 +1,16 @@
 <div class="container-lg">
         <div class="container-fluid">
                 <h1>Signup Page</h1>
-                <% if(@message) %>
-                <strong><%= @message %></strong>
+                <% if(@account_new.errors.any?) %>
+                <ul>
+                        <%= @account_new.errors.full_messages.each do |data| %>
+                                <li>
+                                        <strong><%= data %></strong>
+                                </li>
+
+                        <% end %>
+                </ul>
+
                 <% end %>
                 <%= form_with url: '/signup', method: :get do |new_form| %>
 
@@ -38,9 +46,13 @@
                                 <div class="col-sm-2 col-form-label">
                                         <%= new_form.label :repass , "Re-enter Password" %>
                                 </div>
+
                                 <div class="col-sm-10">
                                         <%= new_form.text_field :repass %>
                                 </div>
+                                <% if !(@message.nil?) %>
+                                <strong> <%= @message %> </strong>
+                                <% end %>
                         </div>
 
                         <div class = "btn btn-dark">
